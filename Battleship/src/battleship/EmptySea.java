@@ -1,8 +1,10 @@
 package battleship;
 
-
+/**
+ * Class of an empty Sea
+ */
 public class EmptySea extends Ship {
-
+    /**the length of an empty sea */
     static final int length = 1;
 
     public EmptySea(){

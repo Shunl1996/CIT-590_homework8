@@ -1,25 +1,23 @@
 package battleship;
 
-
+/**
+* The abstract Ship class has the instance variables below
+*/
 public abstract class Ship {
 	
-	/**
-	 * The abstract Ship class has the instance variables below
-	 */
-
-	 //The row that contains the bow (front part of the ship)
+	 /**The row that contains the bow (front part of the ship)*/
 	private int bowRow;
 
-	//The column that contains the bow (front part of the ship)
+	/**The column that contains the bow (front part of the ship)*/
 	private int bowColumn;
 
-	//The length of the ship
+	/**The length of the ship*/
 	private int length;
 
-	//A boolean that represents whether the ship is going to be placed horizontally or vertically
+	/**A boolean that represents whether the ship is going to be placed horizontally or vertically*/
 	private boolean horizontal;
 
-	//An array of booleans that indicate whether that part of the ship has been hit or not
+	/**An array of booleans that indicate whether that part of the ship has been hit or not */
 	private boolean[] hit;
 
 	/**
@@ -35,6 +33,7 @@ public abstract class Ship {
 	}
 
 	/**
+	 * get ship length
 	 * @return the ship length
 	 */
 	public int getLength(){
@@ -42,7 +41,7 @@ public abstract class Ship {
 	}
 
 	/**
-	 * 
+	 * get the bow row of this ship
 	 * @return the row corresponding to the position of the bow
 	 */
 	public int getBowRow(){
@@ -51,7 +50,7 @@ public abstract class Ship {
 	}
 
 	/**
-	 * 
+	 * get the bow column of this ship
 	 * @return the bow column location
 	 */
 	public int getBowColumn(){
@@ -59,7 +58,7 @@ public abstract class Ship {
 	}
 
 	/**
-	 * 
+	 * get hit array
 	 * @return the hit array
 	 */
 	public boolean[] getHit(){
@@ -67,7 +66,7 @@ public abstract class Ship {
 	}
 
 	/**
-	 * 
+	 * check if this ship is horizontal
 	 * @return whether the ship is horizontal or not
 	 */
 	public boolean isHorizontal(){

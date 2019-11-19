@@ -1,6 +1,9 @@
 package battleship;
 import java.util.Scanner;
 
+/**
+ * main class of this game
+ */
 public class BattleshipGame {
 
 	/**
@@ -32,8 +35,11 @@ public class BattleshipGame {
         return response;
     }
 
+	/**
+	 * Game main function
+	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		boolean continumeGame = true;
 		Scanner scanner = new Scanner(System.in);
 		int row, column;
