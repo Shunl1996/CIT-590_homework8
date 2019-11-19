@@ -131,6 +131,7 @@ public class Ocean {
         Ship ship = this.getShipArray()[row][column];
         String shipType = ship.getShipType();
         if(shipType != "empty") {
+            //Return true if there is a real ship
             return true;
         }else{
             return false;
@@ -172,8 +173,12 @@ public class Ocean {
             boolean checkShiphit = ships[row][column].shootAt(row, column);        
     
             if(checkShiphit){
+                //If the ship is not sunk, and the part of ship is hit, then hitCount increases by 1, even if the same part of ship is shot at multiple times.
                 this.hitCount +=1;
-                if(ships[row][column].isSunk()) this.shipsSunk += 1;
+                if(ships[row][column].isSunk()){
+                    this.shipsSunk += 1;
+                    System.out.println("You just sunk a ship - " + ships[row][column].getShipType() +" !");
+                }
                 return true;
             }
             return false;
@@ -195,6 +200,7 @@ public class Ocean {
     boolean isGameOver(){
         int sink = this.getShipsSunk();
         if (sink ==10){
+            //if the sink number is ten, then the game is over.
             return true;
         }else{
             return false;
@@ -221,9 +227,8 @@ public class Ocean {
     void print(){
 
         System.out.println("  0 1 2 3 4 5 6 7 8 9");
-        
         for(int i = 0 ; i<= 9; i++){
-            //TODO
+            
             System.out.print(i + " ");
            for(int j = 0; j <= 9; j++){
                 Ship ship = ships[i][j];
@@ -231,6 +236,7 @@ public class Ocean {
                 if(ship.getShipType() == "empty"){
                     boolean checkHit = ship.getHit()[0];
                     if(checkHit){
+                        //Return "-" if the spot is fired but nothing is found.
                         stringOfStatus = ship.toString();
                     }else{
                         stringOfStatus = ". ";
@@ -246,6 +252,7 @@ public class Ocean {
 			        }
 
 			        if(ship.getHit()[position] == true){
+                        //Return "x" or "s" depending on if the ship is sunk.
                         stringOfStatus = ship.toString();
                     }else{
                         stringOfStatus = ". ";

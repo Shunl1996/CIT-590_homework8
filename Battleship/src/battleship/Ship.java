@@ -182,10 +182,12 @@ public abstract class Ship {
 		this.setBowRow(row);
 		this.setHorizontal(horizontal);
 		if(!horizontal){
+			//Place the ship it is horizontal
 			for(int i = row; i>=row-this.length+1 ; i--){
 				ocean.getShipArray()[i][column] = this;
 			}
 		}else{
+			//Place the ship if it is vertical
 			for(int j = column; j>= column-this.length+1;j--){
 				ocean.getShipArray()[row][j] = this;
 			}
@@ -201,6 +203,7 @@ public abstract class Ship {
 	 */
 	boolean shootAt(int row, int column){
 		boolean checkIsSunk = this.isSunk();
+		// if ship is sunk, then return false.
 		if(checkIsSunk){
 			return false;
 		}else{
@@ -212,7 +215,7 @@ public abstract class Ship {
 			}else{
 				position = bowRow - row;
 			}
-
+			//put the given part of the ship to the status of hit true.
 			hit[position] = true; 
 			return true;
 		}
@@ -234,7 +237,7 @@ public abstract class Ship {
 
 		}
 		if(hits == this.getLength()){
-			
+			//if the number of the hit true is equal to the length of the ship, then return true
 			return true;
 		}else{
 			return false;

@@ -3,10 +3,7 @@ import java.util.Scanner;
 
 /**
  * main class of this game
-<<<<<<< HEAD
-=======
  * @author Shunshun Liu &amp Liang Chen
->>>>>>> a74500cf163182ea1935e3519f30b4683aa14482
  */
 public class BattleshipGame {
 
@@ -41,10 +38,7 @@ public class BattleshipGame {
 
 	/**
 	 * Game main function
-<<<<<<< HEAD
-=======
 	 * 
->>>>>>> a74500cf163182ea1935e3519f30b4683aa14482
 	 */
 	public static void main(String[] args) {
 	
@@ -61,8 +55,9 @@ public class BattleshipGame {
 				System.out.println("Please input where you want to fire!");
 				
 				while(true){
-					System.out.println("row, column: ");
+					System.out.println("row: ");
 					strrow = scanner.next();
+					System.out.println("column: ");
 					strcolumn = scanner.next();
 					try{
 						row = Integer.parseInt(strrow);
@@ -84,13 +79,13 @@ public class BattleshipGame {
 			ocean.shootAt(row, column);
 			
 			
-			System.out.println("You have already fired: " + ocean.getShotsFired() + "times");
-			System.out.println("You have hitted: " + ocean.getHitCount()+ "times");
-			System.out.println("You have led " + ocean.getShipsSunk() + "ship(s) sunk.");
+			System.out.println("You have already fired: " + ocean.getShotsFired() + " times");
+			System.out.println("You have hitted: " + ocean.getHitCount()+ " times");
+			System.out.println("You have led " + ocean.getShipsSunk() + " ship(s) sunk.");
 			ocean.print();	
 
 			}
-			System.out.println("You have already fired: " + ocean.getShotsFired() + "times");
+			System.out.println("You have already fired: " + ocean.getShotsFired() + " times");
 			continumeGame = getYesOrNoToQuestion("Do you want to play this again?", scanner);
 				
 		}
