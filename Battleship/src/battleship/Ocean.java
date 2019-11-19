@@ -2,6 +2,9 @@ package battleship;
 
 import java.util.Random;
 
+/**
+ * Class of the 10X10 ocean
+ */
 public class Ocean {
 
     /**Used to quickly determine which ship is in any given location*/

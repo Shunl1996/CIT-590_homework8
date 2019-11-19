@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 /**
  * main class of this game
+<<<<<<< HEAD
+=======
+ * @author Shunshun Liu &amp Liang Chen
+>>>>>>> a74500cf163182ea1935e3519f30b4683aa14482
  */
 public class BattleshipGame {
 
@@ -37,6 +41,10 @@ public class BattleshipGame {
 
 	/**
 	 * Game main function
+<<<<<<< HEAD
+=======
+	 * 
+>>>>>>> a74500cf163182ea1935e3519f30b4683aa14482
 	 */
 	public static void main(String[] args) {
 	

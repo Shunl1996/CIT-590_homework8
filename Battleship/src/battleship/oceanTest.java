@@ -331,10 +331,8 @@ class OceanTest {
 			assertEquals(1,ocean1.getHitCount());
 			ocean1.shootAt(2,5);
 			assertEquals(1,ocean1.getHitCount());
-		}else {
-			ocean1.shootAt(2,5);
-			assertEquals(0,ocean1.getHitCount());
 		}
+		
 		Ocean ocean2 = new Ocean();
 		ocean2.placeAllShipsRandomly();
 		for(int i=0;i<10;i++) {
